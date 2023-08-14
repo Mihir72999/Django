@@ -1,0 +1,12 @@
+{% extends 'item/base.html' %}
+{% block title %}
+  shopping 
+{% endblock title %}
+{% block content %}
+  <div class="grid lg:grid-cols-2 grid-cols-1 lg:w-[50%] w-[90%] mx-auto my-12">
+  {% for products in product %}
+  <div class="col-span-1 mx-auto"><img src="{{products.image}}" class="scale-[1.2] my-12" alt="{{products.name}}"/> </div> 
+ <div class="col-span-1 lg:my-0 my-12"><h1 class="text-2xl capitalize">{{products.name}}</h1> </div>
+</div>
+  {% endfor %}
+{% endblock content %}

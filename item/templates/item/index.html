@@ -1,0 +1,29 @@
+{% extends 'item/base.html' %}
+
+{% block title %} about {% endblock %}
+<body>
+{% block content  %} 
+<div class="grid lg:grid-cols-3 grid-cols-2 w-[60%]  justify-center m-auto">
+{% for item in product %}
+<a href="{{item.name}}" ><div class="flex col-span-1 mx-2 my-2 py-2 px-2 border-2 justify-center border-black">
+ <img src="{{item.image}}" alt="{{item.name}}" class="h-[150px]" >   
+<div class="flex"><strong>catagory: </strong><em class="mx-2"> {{item.name}}</em></div>
+</div>
+</a>
+{% endfor %}
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    // let names = document.querySelector('#name').innerHTML
+    // console.log(names)
+    // let price = document.querySelector('.price'+names)
+    // let items = Intl.NumberFormat('en-IN' ,{style:'currency' , currency:'INR'}).format(price.innerText)
+    
+    
+    // price.innerHTML = items
+</script>
+    {% endblock %}
+
+</body>
